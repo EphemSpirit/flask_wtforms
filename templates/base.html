@@ -2,16 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    {% block styles %}
+    {{ bootstrap.load_css() }}{% endblock %}
+
     <title>{% block title %}{% endblock %}</title>
-    <style>
-        {% block styling %}
-            body {
-                background: purple;
-            }
-        {% endblock %}
-    </style>
 </head>
 <body>
     {% block content %}{% endblock %}
 </body>
+{{ bootstrap.load_js() }}
 </html>

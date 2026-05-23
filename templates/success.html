@@ -3,13 +3,6 @@
 <head>
 	{% extends "base.html" %}
 	<title>{% block title %}Success{% endblock %}</title>
-	{% block styling %}
-		{{ super() }}
-		h1 {
-			color:green;
-		}
-	{% endblock %}
-	{{ bootstrap.load_css() }}
 </head>
 <body>
 	{% block content %}
@@ -20,5 +13,4 @@
 		</div>
 	{% endblock %}
 </body>
-{{ bootstrap.load_js() }}
 </html>
